@@ -91,19 +91,12 @@ const App = () => {
   return (
     <div className="app-container">
       <h1 className="heading">Flag <br />Wars</h1>
+      <h3 className='subheading'>Enter your team number</h3>
           <div className="input-container">
+
             <br/>
             <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-        <label htmlFor="teamNumber">Enter Your Team Number:</label>
+
         <input
           type="text"
           id="teamNumber"

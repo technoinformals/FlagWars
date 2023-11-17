@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/FlagWars/static/css/main.288ed279.css",
-    "main.js": "/FlagWars/static/js/main.057b0e79.js",
+    "main.js": "/FlagWars/static/js/main.767c1c4b.js",
     "static/media/bg.jpeg": "/FlagWars/static/media/bg.126894909bc9c8044a71.jpeg",
     "static/media/earth.png": "/FlagWars/static/media/earth.eb76f64b4ad2ef587fa7.png",
     "static/media/wind.png": "/FlagWars/static/media/wind.92d41d0396e2afbebb49.png",
@@ -9,10 +9,10 @@
     "static/media/water.png": "/FlagWars/static/media/water.38c6ea5eb26186161625.png",
     "index.html": "/FlagWars/index.html",
     "main.288ed279.css.map": "/FlagWars/static/css/main.288ed279.css.map",
-    "main.057b0e79.js.map": "/FlagWars/static/js/main.057b0e79.js.map"
+    "main.767c1c4b.js.map": "/FlagWars/static/js/main.767c1c4b.js.map"
   },
   "entrypoints": [
     "static/css/main.288ed279.css",
-    "static/js/main.057b0e79.js"
+    "static/js/main.767c1c4b.js"
   ]
 }

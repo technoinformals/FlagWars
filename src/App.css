@@ -67,6 +67,11 @@ input {
   color: #fff;
 }
 
+.progflag{
+
+  font-family: 'Kanit', sans-serif;
+}
+
 @media screen and (max-width: 600px) {
   .heading {
     font-size: 4.5em;

@@ -61,7 +61,7 @@ const App = () => {
     const teamNumberValue = Number(teamNumber);
     const nextTeamNumber = teamNumberValue + 1;
     const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1b0NqaJ6RybLYZu1y8UO84b1hQJUJzywlTJzHxKJ49Oc/values/B${nextTeamNumber}:E${nextTeamNumber}`;
-      const accessToken = 'ya29.a0AfB_byDSGd7Dw_4_hg7oUbUcRh-09ERh7sHIpuG_FBGIti_-jtJPqdicDFpuBOOrexJVQ3LTrPoi3LfiFjj0v42KBdY96BGfzjldXzaO66RSAnjLkge_c0-csUwejUGSiosSAJPdjvY8ypgBBVSIZpjm58dU1X7VeccxaCgYKAXcSARMSFQHGX2MimYaLMECVPCRNOmhBI4Qosw0171';
+      const accessToken = 'ya29.a0AfB_byALkU1ypy_kEt_gCSabdhNI_I50pfCCQZHp35X94VVxmo-xYX4BlaXM8Rvw_asjWsvMt52EcKLBZMfF9JQjzTqXRiClKf2I6QKbfv3Pdi2uwHdhKqkYX2_SBNCP5UIhfGeZmPV32lr2_FiH2H2Mt8awwnEH0QOmaCgYKAUISARMSFQHGX2MiehfxrjYjjD8amL3UH-PW7w0171';
 
     try {
       const response = await fetch(apiUrl, {
@@ -120,11 +120,15 @@ const App = () => {
         {images.map((image, index) => (
           <div key={index} className="image-container">
             <img alt="" src={image.src} className="img-responsive" />
+
+<p className='progflag'>Flags = {Number(responseData.values[0][index])}</p>
+            <div className='progress'>
             <ProgressBar
   variant={getProgressBarVariant(index)}
-  now={Number(responseData.values[0][index]) * 20}
-  label={`${Number(responseData.values[0][index]) * 20}%`} // Multiply the label data value by 20
+  now={Math.min(Number(responseData.values[0][index]) * 20, 95)}
+  label={`\u00a0`} // Multiply the label data value by 20
 />
+</div>
           </div>
         ))}
       </div>

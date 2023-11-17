@@ -58,8 +58,10 @@ const App = () => {
   };
 
   const handleSubmit = async () => {
-    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1htzgArSyLu9kyl6Ed1SB4v_w5jiAn8oof7icfOzc1l8/values/B${teamNumber}:D${teamNumber}`;
-    const accessToken = 'ya29.a0AfB_byBjH6pCJvVJeSPmxpQ33J4Edb5eXy_SuYE1xdNDvlzveE3LagGRw7q410Q1QRZeI1z6EU8P9DQ-1gCkrN1pAX3LwpjwlK46RT1s91uats_4hmMFbumcpMtoYwRSzsFnXqL__z3_M-36VoXobJWk0qMV8NYLznjsaCgYKAfgSAQ8SFQHGX2MiPGENkAZuDZQZ8JzF2CP99g0171';
+    const teamNumberValue = Number(teamNumber);
+    const nextTeamNumber = teamNumberValue + 1;
+    const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1b0NqaJ6RybLYZu1y8UO84b1hQJUJzywlTJzHxKJ49Oc/values/B${nextTeamNumber}:E${nextTeamNumber}`;
+      const accessToken = 'ya29.a0AfB_byDSGd7Dw_4_hg7oUbUcRh-09ERh7sHIpuG_FBGIti_-jtJPqdicDFpuBOOrexJVQ3LTrPoi3LfiFjj0v42KBdY96BGfzjldXzaO66RSAnjLkge_c0-csUwejUGSiosSAJPdjvY8ypgBBVSIZpjm58dU1X7VeccxaCgYKAXcSARMSFQHGX2MimYaLMECVPCRNOmhBI4Qosw0171';
 
     try {
       const response = await fetch(apiUrl, {
@@ -125,7 +127,11 @@ const App = () => {
         {images.map((image, index) => (
           <div key={index} className="image-container">
             <img alt="" src={image.src} className="img-responsive" />
-            <ProgressBar variant={getProgressBarVariant(index)} now={Number(responseData.values[0][index])} label={`${responseData.values[0][index]}%`} />
+            <ProgressBar
+  variant={getProgressBarVariant(index)}
+  now={Number(responseData.values[0][index]) * 20}
+  label={`${Number(responseData.values[0][index]) * 20}%`} // Multiply the label data value by 20
+/>
           </div>
         ))}
       </div>

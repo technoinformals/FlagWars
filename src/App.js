@@ -61,7 +61,7 @@ const App = () => {
     const teamNumberValue = Number(teamNumber);
     const nextTeamNumber = teamNumberValue + 1;
     const apiUrl = `https://sheets.googleapis.com/v4/spreadsheets/1b0NqaJ6RybLYZu1y8UO84b1hQJUJzywlTJzHxKJ49Oc/values/B${nextTeamNumber}:E${nextTeamNumber}`;
-      const accessToken = 'ya29.a0AfB_byAgIa3PK02AIMExww_7agu77AHFU9QEPaXNGg_FgFGt2J7T8lLwS1CHOdmG5rnd9FkUvGswOQSQRtcZ0i2jFxKqgddohx1LVe7eDmer4SPhyHIMB9dFQ5Pr6OpdVqkVExTR0nZqU24EuIi75LY82L2mdgYiCurTaCgYKAf0SARMSFQHGX2Min_Av1NQgUj9aEZn3hGHDsw0171';
+      const accessToken = 'ya29.a0AfB_byBMDzNup_zmJxlkbGqhNWQrN4s_8YbOMycczoDf-UWC7B-CaWRCXg5qKlzoLjwtpeBNz51Ka3F0MNDReu7dsaaNcLD1Gno59TmJlVPyWg6jq7agi1mBIEqQjvh5II-knEDBprF-F3lnCOd1RHzjmMbPi5ZsuUp4aCgYKAXoSARMSFQHGX2MiIPE-hulMAHBN9GY5Cdiu-w0171';
 
     try {
       const response = await fetch(apiUrl, {
